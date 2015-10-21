@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/albertogonper/ember-jquery-mobile",
+  "repository": "https://github.com/albertogonper/ember-jquery-mobile.git",
   "engines": {
     "node": ">= 0.10.0"
   },
