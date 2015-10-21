@@ -44,7 +44,7 @@ For more info about how to use these handlebars components please check the [wik
 
 * `git clone` this repository
 * `npm install`
-* `bower install`
+* `bower install --force-latest`
 
 ## Running
 
