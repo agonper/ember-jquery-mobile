@@ -28,7 +28,7 @@ before_install:
 install:
   - npm install -g bower
   - npm install
-  - bower install
+  - bower install --force-latest
 
 script:
   - ember try $EMBER_TRY_SCENARIO test
