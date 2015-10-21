@@ -1,4 +1,5 @@
 # Ember jQuery Mobile
+[![Build Status](https://travis-ci.org/albertogonper/ember-jquery-mobile.svg)](https://travis-ci.org/albertogonper/ember-jquery-mobile)  
 
 This addon appears as a solution for working with jQuery Mobile on an Ember CLI application (Ember.js 2.x)
 
