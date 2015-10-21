@@ -1,0 +1,21 @@
+{{#if hasBlock}}
+  {{#jqm-component role="header"}}
+    {{title}}
+  {{/jqm-component}}
+  {{#jqm-component role="main" class="ui-content"}}
+    {{yield}}
+  {{/jqm-component}}
+  {{#if closeButton}}
+    {{jqm-anchor href="#" rel="close" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext ui-btn-b ui-btn-right"}}
+  {{/if}}
+{{else}}
+  {{#jqm-component role="header"}}
+      <h3>{{title}}</h3>
+  {{/jqm-component}}
+  {{#jqm-component role="main" class="ui-content"}}
+    {{body}}
+  {{/jqm-component}}
+  {{#if closeButton}}
+    {{jqm-anchor href="#" rel="close" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext ui-btn-b ui-btn-right"}}
+  {{/if}}
+{{/if}}
