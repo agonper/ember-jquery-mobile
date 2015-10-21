@@ -1,0 +1,13 @@
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{#each options as |option|}}
+    {{#if option.disabled}}
+        <option value="{{option.value}}" disabled>{{option.text}}</option>
+    {{else if option.selected}}
+            <option value="{{option.value}}" selected>{{option.text}}</option>
+    {{else}}
+            <option value="{{option.value}}">{{option.text}}</option>
+    {{/if}}
+  {{/each}}
+{{/if}}
