@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('jqm-popup', 'Integration | Component | jqm popup', {
+moduleForComponent('jqm-button', 'Integration | Component | jqm button', {
   integration: true
 });
 
@@ -11,17 +11,16 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{jqm-popup}}`);
+  this.render(hbs`{{jqm-button}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#jqm-popup}}
+    {{#jqm-button}}
       template block text
-    {{/jqm-popup}}
+    {{/jqm-button}}
   `);
 
-  // Content doesn't has to be shown until the popup is loaded
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'template block text');
 });
