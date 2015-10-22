@@ -1,3 +1,5 @@
+var rsvp = require('rsvp/dist/rsvp.js');
+
 module.exports = {
   description: 'ember-jquery-mobile initializer',
 
@@ -6,9 +8,9 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return Promise.all([
+    return rsvp.Promise.all([
       this.addBowerPackageToProject('jquery-mobile-bower'),
-      this.addBowerPackageToProject('arschmitz/jquery-mobile-datepicker-wrapper')
+      this.addBowerPackageToProject('jquery-mobile-datepicker-wrapper', 'arschmitz/jquery-mobile-datepicker-wrapper')
     ]);
   }
 };
