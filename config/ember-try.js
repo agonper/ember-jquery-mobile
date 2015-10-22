@@ -10,7 +10,8 @@ module.exports = {
         'ember': 'components/ember#release'
       },
       resolutions: {
-        'ember': 'release'
+        'ember': 'release',
+        "jquery": "~2.1.4"
       }
     },
     {
@@ -19,7 +20,8 @@ module.exports = {
         'ember': 'components/ember#beta'
       },
       resolutions: {
-        'ember': 'beta'
+        'ember': 'beta',
+        "jquery": "~2.1.4"
       }
     },
     {
@@ -28,7 +30,8 @@ module.exports = {
         'ember': 'components/ember#canary'
       },
       resolutions: {
-        'ember': 'canary'
+        'ember': 'canary',
+        "jquery": "~2.1.4"
       }
     }
   ]
