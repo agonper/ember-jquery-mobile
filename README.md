@@ -8,7 +8,7 @@ The addon is actually working with:
 * Ember Data 2.1.0
 * jQuery Mobile 1.4.5
 
-This addon methodology is based on wrapping each one of the jQuery Mobile widgets in an Ember.js component.
+The basis of this addon is to wrap each one of the jQuery Mobile widgets in an Ember.js component.
 
 These components can be used on any handlebars template as you normally do.
 
@@ -16,7 +16,7 @@ To see actual component list, please go to [implemented components](#implemented
 
 ***
 
-**Please note** This is an Ember CLI not an standalone Ember.js app. Here, you can see a [working example](https://github.com/albertogonper/ember-jqm-example)
+**Please note** this is an Ember CLI addon not an standalone Ember.js app. Here, you can see a [working example](https://github.com/albertogonper/ember-jqm-example)
 
 ***
 
