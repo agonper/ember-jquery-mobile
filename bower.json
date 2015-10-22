@@ -14,5 +14,8 @@
     "qunit": "~1.18.0",
     "jquery-mobile-bower": "~1.4.5",
     "jquery-mobile-datepicker-wrapper": "arschmitz/jquery-mobile-datepicker-wrapper#~0.1.9"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }
