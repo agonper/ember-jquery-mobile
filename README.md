@@ -41,6 +41,24 @@ More components will be implemented, if you want to help with this please see [c
 
 For more info about how to use these handlebars components please check the [wiki pages](https://github.com/albertogonper/ember-jquery-mobile/wiki) *Not done yet* see the [working example](https://github.com/albertogonper/ember-jqm-example) instead
 
+# For users
+## Installation
+
+**Please make sure that you have [Ember CLI](http://www.ember-cli.com/user-guide/#getting-started) installed**
+
+If not done yet, create a new project
+
+    ember new <app-name>
+
+Then you can install the addon
+
+    ember install ember-jquery-mobile
+    
+**NOTE:** There's actually a jQuery dependency incoherency between Ember.Js and jQuery Mobile, you can execute `bower install --force-latest as for now jQuery 2.1.x is working fine with both (this will remove old browsers support[1](http://blog.jquery.com/2013/04/18/jquery-2-0-released/))
+
+Now you can start adding jQuery Mobile components to your handlebars templates[2](#implemented-components)
+
+# For developers
 ## Installation
 
 * `git clone` this repository
