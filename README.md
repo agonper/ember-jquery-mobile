@@ -39,7 +39,7 @@ This is the list of the available jQuery Mobile widgets (Ember.js Components) fo
 
 More components will be implemented, if you want to help with this please see [contributing](./CONTRIBUTING.md)
 
-For more info about how to use these handlebars components please check the [wiki pages](/wiki) *Not done yet* see the [working example](https://github.com/albertogonper/ember-jqm-example) instead
+For more info about how to use these handlebars components please check the [wiki pages](https://github.com/albertogonper/ember-jquery-mobile/wiki) *Not done yet* see the [working example](https://github.com/albertogonper/ember-jqm-example) instead
 
 ## Installation
 
@@ -64,6 +64,10 @@ For more info about how to use these handlebars components please check the [wik
 ## Issues
 
 Feel free to submit issues and enhancement requests.
+
+## Contributing
+
+Want to help? Please check [contributing](./CONTRIBUTING.md)
 
 ***
 
