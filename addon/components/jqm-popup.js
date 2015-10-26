@@ -7,8 +7,10 @@ export default JqmComponent.extend({
   attributeBindings: ['dismissible:data-dismissible', 'position:data-position'],
   classNameBindings: ['ui-popup'],
   role: 'popup',
+  transition: 'pop',
   didInsertElement() {
     $(this.$()).enhanceWithin().popup();
+    $(this.$()).popup('option', 'transition', this.get('transition'));
   },
   actions: {
     closePopup() {
