@@ -1,11 +1,8 @@
 import layout from '../templates/components/jqm-button';
-import JqmComponent from './jqm-component';
+import JqmBtnType from './jqm-btn-type';
 
-export default JqmComponent.extend({
+export default JqmBtnType.extend({
   layout: layout,
   tagName: 'button',
-  classNameBindings: ['ui-btn'],
-  click() {
-    this.sendAction();
-  }
+  classNameBindings: ['ui-btn']
 });
