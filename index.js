@@ -1,6 +1,10 @@
 /* jshint node: true */
 'use strict';
 
+var mergeTrees = require('broccoli-merge-trees');
+var Funnel = require('broccoli-funnel');
+var path = require('path');
+
 module.exports = {
   name: 'ember-jquery-mobile',
   included: function(app) {
@@ -22,7 +26,20 @@ module.exports = {
     app.import(app.bowerDirectory + "/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css");
     app.import(app.bowerDirectory + "/jquery-mobile-datepicker-wrapper/jquery.mobile.datepicker.css");
     app.import(app.bowerDirectory + "/jquery-mobile-datepicker-wrapper/jquery.mobile.datepicker.theme.css");
+  },
+  treeForPublic: function(tree) {
 
+    var trees = [];
 
+    if (tree) {
+      trees.push(tree);
+    }
+
+    trees.push(new Funnel(path.join(this.app.bowerDirectory, 'jquery-mobile-bower/css/images'), {
+      srcDir: '/',
+      destDir: 'assets/images'
+    }));
+
+    return mergeTrees(trees);
   }
 };
