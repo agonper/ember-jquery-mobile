@@ -3,7 +3,7 @@ import layout from '../templates/components/jqm-btn-type';
 
 export default JqmComponent.extend({
   layout: layout,
-  attributeBindings: ['corners:data-corners', 'icon:data-icon', 'iconPos:data-iconpos'],
+  attributeBindings: ['icon:data-icon', 'iconPos:data-iconpos', 'mini:data-mini', 'inline:data-inline'],
   click() {
     this.sendAction();
   }
