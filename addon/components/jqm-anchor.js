@@ -3,6 +3,7 @@ import JqmBtnType from './jqm-btn-type';
 
 export default JqmBtnType.extend({
   layout: layout,
-  nameTag: "a",
-  attributeBindings: ['rel:data-rel']
+  tagName: "a",
+  attributeBindings: ['rel:data-rel'],
+  classNames: ['ui-btn']
 });

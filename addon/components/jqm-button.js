@@ -3,6 +3,5 @@ import JqmBtnType from './jqm-btn-type';
 
 export default JqmBtnType.extend({
   layout: layout,
-  tagName: 'button',
-  classNameBindings: ['ui-btn']
+  tagName: 'button'
 });
