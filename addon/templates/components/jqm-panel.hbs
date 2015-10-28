@@ -1,6 +1,6 @@
 {{#if hasBlock}}
   {{#jqm-component role="header"}}
-    {{title}}
+    <h1>{{title}}</h1>
   {{/jqm-component}}
   {{#jqm-component role="main" class="ui-content"}}
     {{yield}}
@@ -10,7 +10,7 @@
   {{/if}}
 {{else}}
   {{#jqm-component role="header"}}
-      <h3>{{title}}</h3>
+      <h1>{{title}}</h1>
   {{/jqm-component}}
   {{#jqm-component role="main" class="ui-content"}}
     {{body}}

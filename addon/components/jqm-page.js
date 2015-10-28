@@ -12,6 +12,7 @@ export default JqmComponent.extend({
     $( document ).trigger('jqm.init-page');
     $( document ).unbind('jqm.init-page').bind('jqm.init-page', () => {
       $.mobile.initializePage();
+      $.mobile.resetActivePageHeight();
       $('.ui-loader').hide();
     });
   }
