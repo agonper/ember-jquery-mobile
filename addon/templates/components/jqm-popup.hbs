@@ -1,6 +1,6 @@
 {{#if hasBlock}}
   {{#if closeButton}}
-    {{jqm-anchor action="closePopup" allCorners=true shadow=true class="ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right"}}
+    {{jqm-anchor action="closePopup" allCorners=true shadow=true theme="b" icon="delete" iconPos="notext" class="ui-btn-right"}}
   {{/if}}
   {{#jqm-component role="header"}}
       <h1>{{title}}</h1>
@@ -10,7 +10,7 @@
   {{/jqm-component}}
 {{else}}
   {{#if closeButton}}
-    {{jqm-anchor action="closePopup" allCorners=true shadow=true class="ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right"}}
+    {{jqm-anchor action="closePopup" allCorners=true shadow=true theme="b" icon="delete" iconPos="notext" class="ui-btn-right"}}
   {{/if}}
   {{#jqm-component role="header"}}
       <h1>{{title}}</h1>
