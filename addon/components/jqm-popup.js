@@ -4,7 +4,8 @@ import JqmComponent from './jqm-component';
 
 export default JqmComponent.extend({
   layout: layout,
-  attributeBindings: ['dismissible:data-dismissible', 'position:data-position', 'overlay-theme:data-overlay-theme'],
+  attributeBindings: ['dismissible:data-dismissible', 'position:data-position', 'overlay-theme:data-overlay-theme',
+    'positionTo:data-position-to'],
   classNameBindings: ['ui-popup'],
   role: 'popup',
   transition: 'pop',

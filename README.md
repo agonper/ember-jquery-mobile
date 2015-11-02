@@ -39,6 +39,7 @@ This is the list of the available jQuery Mobile widgets (Ember.js Components) fo
 * `jqm-ulistview`: unordered list view, wraps jQuery Mobile list view `<ul>` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Read-onlyunordered)
 * `jqm-olistview`: ordered list view, wraps jQuery Mobile list view `<ol>` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Read-onlyordered)
 * `jqm-listdivider`: wraps jQuery Mobile list divider `<li data-role="listdivider">` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Listdividers)
+* `jqm-listitem`: wraps jQuery Mobile list item widget `<li data-icon="icon">` element, best way to change the default `<li>` icon, for the other cases `<li>` element it's ok. See [listview](http://demos.jquerymobile.com/1.4.5/listview)
 
 More components will be implemented, if you want to help with this please see [contributing](./CONTRIBUTING.md)
 
