@@ -36,6 +36,9 @@ This is the list of the available jQuery Mobile widgets (Ember.js Components) fo
 * `jqm-slider`: wraps jQuery Mobile Slider component, it maintains its special properties and behavior, see [slider](http://demos.jquerymobile.com/1.4.5/slider/). Also extends Ember.TextInput
 * `jqm-select`: wraps jQuery Mobile select menu. See [selectmenu](http://demos.jquerymobile.com/1.4.5/selectmenu/)
 * `jqm-datepicker`: wraps jQuery Mobile datepicker, this is a 3rd party component please check [datepicker](http://demos.jquerymobile.com/1.4.5/datepicker/)
+* `jqm-ulistview`: unordered list view, wraps jQuery Mobile list view `<ul>` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Read-onlyunordered)
+* `jqm-olistview`: ordered list view, wraps jQuery Mobile list view `<ol>` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Read-onlyordered)
+* `jqm-listdivider`: wraps jQuery Mobile list divider `<li data-role="listdivider">` element. See [listview](http://demos.jquerymobile.com/1.4.5/listview/#Listdividers)
 
 More components will be implemented, if you want to help with this please see [contributing](./CONTRIBUTING.md)
 
