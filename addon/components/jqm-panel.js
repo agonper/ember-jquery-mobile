@@ -18,12 +18,21 @@ export default JqmComponent.extend({
         $(this.$()).panel('open');
       }
     });
-    var routeOnClose = this.get('routeOnClose');
+    var that = this;
+    $(this.$()).one("swipeleft swiperight", function() {
+      that.changeRouteIfDefined(that);
+    });
+  },
+  actions: {
+    closePanel() {
+      $(this.$()).panel('close');
+      this.changeRouteIfDefined(this);
+    }
+  },
+  changeRouteIfDefined(panel) {
+    var routeOnClose = panel.get('routeOnClose');
     if (routeOnClose) {
-      var parentController = this.get('targetObject');
-      $(this.$()).on('panelclose', function() {
-        parentController.transitionToRoute(routeOnClose);
-      });
+      panel.get('targetObject').transitionToRoute(routeOnClose);
     }
   }
 });
