@@ -18,5 +18,12 @@ export default JqmComponent.extend({
         $(this.$()).panel('open');
       }
     });
+    var routeOnClose = this.get('routeOnClose');
+    if (routeOnClose) {
+      var parentController = this.get('targetObject');
+      $(this.$()).on('panelclose', function() {
+        parentController.transitionToRoute(routeOnClose);
+      });
+    }
   }
 });
