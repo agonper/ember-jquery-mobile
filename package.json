@@ -1,6 +1,6 @@
 {
   "name": "ember-jquery-mobile",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Ember CLI jQuery Mobile wrapper",
   "directories": {
     "doc": "doc",
