@@ -4,7 +4,8 @@ import layout from '../templates/components/jqm-slider';
 
 export default Ember.TextField.extend({
   layout: layout,
-  attributeBindings: ['mini:data-mini', 'highlight:data-highlight', 'dataType:data-type'],
+  attributeBindings: ['mini:data-mini', 'highlight:data-highlight', 'dataType:data-type',
+    'autofocus', 'name', 'required', 'autocomplete'],
   type: "number",
   dataType: "range",
   didInsertElement() {
