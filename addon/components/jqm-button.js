@@ -3,5 +3,6 @@ import JqmBtnType from './jqm-btn-type';
 
 export default JqmBtnType.extend({
   layout: layout,
-  tagName: 'button'
+  tagName: 'button',
+  attributeBindings: ['isDisabled:disabled']
 });
