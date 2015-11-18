@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import Ember from 'ember';
 import layout from '../templates/components/jqm-select';
 import JqmComponent from './jqm-component';
 
@@ -6,6 +7,10 @@ export default JqmComponent.extend({
   layout: layout,
   tagName: 'select',
   attributeBindings: ['mini:data-mini', 'iconPos:data-iconpos', 'name', 'autocomplete', 'autofocus'],
+  checkRefresh: Ember.observer('options.@each.text', function () {
+    // Wait for options to become filled
+    Ember.run.once(this, 'refreshUi');
+  }),
   isDisabled: false,
   change() {
     this.sendAction('action', $(this.$()).val());
@@ -20,7 +25,6 @@ export default JqmComponent.extend({
     $(this.$()).selectmenu({
       create: function () {
         that.addObserver('isDisabled', function () {
-          console.debug(this);
           if (this.get('isDisabled')) {
             $(this.$()).selectmenu('disable');
             return 'disabled';
@@ -32,5 +36,9 @@ export default JqmComponent.extend({
         that.notifyPropertyChange('isDisabled');
       }
     });
+  },
+  refreshUi() {
+    // Force select to refresh
+    $(this.$()).selectmenu('refresh', true);
   }
 });
