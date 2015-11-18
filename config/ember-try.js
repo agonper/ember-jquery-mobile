@@ -8,7 +8,7 @@ module.exports = {
       name: 'ember-release',
       dependencies: {
         'ember': 'components/ember#release',
-        'ember-data': 'release'
+        'ember-data': 'components/ember-data#release'
       },
       resolutions: {
         'ember': 'release',
@@ -19,7 +19,7 @@ module.exports = {
       name: 'ember-beta',
       dependencies: {
         'ember': 'components/ember#beta',
-        'ember-data': 'beta'
+        'ember-data': 'components/ember-data#beta'
       },
       resolutions: {
         'ember': 'beta',
@@ -30,7 +30,7 @@ module.exports = {
       name: 'ember-canary',
       dependencies: {
         'ember': 'components/ember#canary',
-        'ember-data': 'canary'
+        'ember-data': 'components/ember-data#canary'
       },
       resolutions: {
         'ember': 'canary',
