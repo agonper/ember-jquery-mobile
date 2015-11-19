@@ -32,7 +32,7 @@ This is the list of the available jQuery Mobile widgets (Ember.js Components) fo
 * `jqm-anchor`: wraps jQuery Mobile anchor (link). See [button-markup](http://demos.jquerymobile.com/1.4.5/button-markup/)
 * `jqm-button`: wraps jQuery Mobile button. See [button-markup](http://demos.jquerymobile.com/1.4.5/button-markup/)
 * `jqm-textinput`: wraps jQuery Mobile normal Text Input. This lets you create text inputs, checkboxes, radio buttons, etc for more see [textinput](http://demos.jquerymobile.com/1.4.5/textinput/) **CAUTION! Do not use this to generate a text area, instead use jqm-textarea**. Extends Ember.TextField
-* `jqm-fileinput`: wraps jQuery Mobile file Input. This lets you obtain files from the user computer for more see [textinput](http://demos.jquerymobile.com/1.4.5/textinput/) **CAUTION! Do not use this to generate a text area, instead use jqm-textarea**. Extends Ember.TextField
+* `jqm-fileinput`: wraps jQuery Mobile file Input. This lets you obtain files from the user computer for more see [textinput](http://demos.jquerymobile.com/1.4.5/textinput/). Extends jqm-textinput
 * `jqm-textarea`: wraps jQuery Mobile text area (Text Input). See [textinput](http://demos.jquerymobile.com/1.4.5/textinput/). This extends Ember.TextArea, this is why both input components are detached
 * `jqm-slider`: wraps jQuery Mobile Slider component, it maintains its special properties and behavior, see [slider](http://demos.jquerymobile.com/1.4.5/slider/). Also extends Ember.TextInput
 * `jqm-select`: wraps jQuery Mobile select menu. See [selectmenu](http://demos.jquerymobile.com/1.4.5/selectmenu/)

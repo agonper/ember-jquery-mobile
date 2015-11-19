@@ -4,5 +4,5 @@ import layout from '../templates/components/jqm-textinput';
 export default Ember.TextField.extend({
   layout: layout,
   attributeBindings: ['clearBtn:data-clear-btn', 'mini:data-mini', 'autofocus',
-    'name', 'required', 'accept', 'autocomplete']
+    'name', 'required', 'autocomplete']
 });
