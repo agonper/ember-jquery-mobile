@@ -5,7 +5,7 @@ This addon appears as a solution for working with jQuery Mobile on an Ember CLI 
 
 The addon is actually working with:
 
-* Ember Data 2.1.0
+* Ember 2.2.0
 * jQuery Mobile 1.4.5
 
 The basis of this addon is to wrap each one of the jQuery Mobile widgets in an Ember.js component.
