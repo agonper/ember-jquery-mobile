@@ -12,11 +12,36 @@ export default JqmComponent.extend({
     Ember.run.once(this, 'refreshUi');
   }),
   isDisabled: false,
+
   change() {
-    this.sendAction('action', $(this.$()).val());
+    /**
+     * @Deprecated avoid using action, will be removed on 1.1
+     */
+    if (this.get('action')) {
+      this.sendAction('action', $(this.$()).val());
+    }
+    this.set('value', $(this.$()).val());
   },
+
+  // Listen to external value changes to select one option
+  valueChange: Ember.on('init', Ember.observer('value', function () {
+    $(this.$()).val(this.get('value'));
+    Ember.run.once(this, 'refreshUi'); // The placeholder has changed, refresh ui when possible
+  })),
   didInsertElement() {
     this._super();
+
+    // Check if the developer entered an action
+    if (this.get('action')) {
+      console.warn("DEPRECATED: you should no longer use jqm-select <action on='change'> use value instead. -- will be removed in 1.1");
+    }
+
+    // Take some decisions about the initial status
+    if (!this.get('value')){ // If not value selected, then
+      this.set('value', $(this.$()).val()); // Set initial value
+    } else {
+      this.notifyPropertyChange('value'); // Change default selected value
+    }
 
     // Since jQm Select is a complex component,
     // the only way to enable / disable is

@@ -15,13 +15,15 @@ export default Ember.TextField.extend({
     elem.datepicker({
       dateFormat: this.get('dateFormat'),
       onSelect: function () {
+
+        // Propagate value change, only when the variable value has been assigned
         Ember.run.once(that, 'refresh');
       }
     });
 
     if (this.get('showToday')) {
       elem.datepicker('setDate', new Date());
-      this.$().change();
+      this.$().change(); // Force to read value
     }
 
     // Remove datepicker from the bottom of the page
