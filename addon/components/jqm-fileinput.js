@@ -5,10 +5,18 @@ export default JqmTextInput.extend({
   layout: layout,
   attributeBindings: ['accept'],
   type: 'file',
-  onFile: null, // Callback action. onFile(evt)
   change(evt) {
+    /**
+     * @Deprecated
+     */
     if (this.get('onFile')) {
       this.sendAction('onFile', evt);
+    }
+    this.set('files', evt.target.files);
+  },
+  didInsertElement() {
+    if (this.get('onFile')) {
+      console.warn("DEPRECATED: you should no longer use jqm-fileinput <action on='change'> use files instead. -- will be removed in 1.1");
     }
   }
 });
