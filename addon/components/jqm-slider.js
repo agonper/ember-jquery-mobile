@@ -9,6 +9,10 @@ export default Ember.TextField.extend({
   type: "number",
   dataType: "range",
   didInsertElement() {
-    $(this.$()).slider().textinput();
+    var elem = $(this.$());
+    elem.slider().textinput();
+    elem.on("slidestop", () => {
+      this.$().change();
+    });
   }
 });
