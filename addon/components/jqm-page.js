@@ -8,12 +8,8 @@ export default JqmComponent.extend({
   classNameBindings: ['ui-page-active'],
   role: 'page',
   didInsertElement() {
-    // This makes first load faster and good rendered
-    $( document ).trigger('jqm.init-page');
-    $( document ).unbind('jqm.init-page').bind('jqm.init-page', () => {
-      $.mobile.initializePage();
-      $.mobile.resetActivePageHeight();
-      $('.ui-loader').hide();
-    });
+    $.mobile.initializePage();
+    $.mobile.resetActivePageHeight();
+    $('.ui-loader').hide();
   }
 });

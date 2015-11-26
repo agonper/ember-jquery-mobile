@@ -7,6 +7,7 @@ export function initialize() {
   $.mobile.linkBindingEnabled = false;
   $.mobile.hashListeningEnabled = false;
   $.mobile.ignoreContentEnabled = true;
+  $.mobile.autoInitializePage = false;
 }
 
 export default {
