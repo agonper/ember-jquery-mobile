@@ -26,6 +26,14 @@ export default Ember.TextField.extend({
       this.$().change(); // Force to read value
     }
 
+    if (this.get('months')) {
+      elem.datepicker('option', 'monthNames', this.get('months'));
+    }
+
+    if (this.get('days')) {
+      elem.datepicker('option', 'dayNamesMin', this.get('days'));
+    }
+
     // Remove datepicker from the bottom of the page
     $( '.ui-datepicker' ).css('display', 'none');
   },
