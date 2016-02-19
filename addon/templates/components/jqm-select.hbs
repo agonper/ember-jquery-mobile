@@ -2,12 +2,26 @@
   {{yield}}
 {{else}}
   {{#each options as |option|}}
-    {{#if option.disabled}}
-        <option value="{{option.value}}" disabled>{{option.text}}</option>
-    {{else if option.selected}}
-            <option value="{{option.value}}" selected>{{option.text}}</option>
+    {{#if option.optgroup}}
+      <optgroup label="{{option.optgroup}}">
+      {{#each option.elements as |element|}}
+        {{#if element.disabled}}
+            <option value="{{element.value}}" disabled>{{element.text}}</option>
+        {{else if element.selected}}
+            <option value="{{element.value}}" selected>{{element.text}}</option>
+        {{else}}
+            <option value="{{element.value}}">{{element.text}}</option>
+        {{/if}}
+      {{/each}}
+      </optgroup>
     {{else}}
-            <option value="{{option.value}}">{{option.text}}</option>
+      {{#if option.disabled}}
+          <option value="{{option.value}}" disabled>{{option.text}}</option>
+      {{else if option.selected}}
+          <option value="{{option.value}}" selected>{{option.text}}</option>
+      {{else}}
+          <option value="{{option.value}}">{{option.text}}</option>
+      {{/if}}
     {{/if}}
   {{/each}}
 {{/if}}
