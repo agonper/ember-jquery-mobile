@@ -8,31 +8,49 @@ export default JqmComponent.extend({
   attributeBindings: ['theme:data-theme', 'position:data-position',
     'display:data-display', 'dismissible:data-dismissible'],
   theme: 'a',
+  animate: false,
   position: 'left',
   display: 'overlay',
   dismissible: 'true',
   didInsertElement() {
-    $(this.$()).panel({
+
+    var elem = $(this.$());
+
+    elem.panel({
       create: () => {
-        $(this.$()).enhanceWithin();
-        $(this.$()).panel('open');
-      }
+        elem.enhanceWithin();
+        elem.panel('open');
+      },
+      animate: this.get('animate'),
+      position: this.get('position')
     });
+
     var that = this;
-    $(this.$()).one("swipeleft swiperight", function() {
+
+    var swipe = this.get('position') === 'left' ? 'swipeleft' : 'swiperight';
+    $(this.$()).one(swipe, function() {
       that.changeRouteIfDefined(that);
     });
+
+    this.set('elem', elem);
   },
   actions: {
     closePanel() {
-      $(this.$()).panel('close');
       this.changeRouteIfDefined(this);
     }
   },
   changeRouteIfDefined(panel) {
+    $(this.$()).panel('close');
+
     var routeOnClose = panel.get('routeOnClose');
     if (routeOnClose) {
       panel.get('targetObject').transitionToRoute(routeOnClose);
     }
+  },
+  willDestroy() {
+    var elem = this.get('elem');
+    elem.panel('close');
+    elem.remove();
+    $.mobile.resetActivePageHeight();
   }
 });
