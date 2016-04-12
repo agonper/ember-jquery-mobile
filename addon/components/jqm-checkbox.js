@@ -7,6 +7,12 @@ export default Ember.Checkbox.extend({
   attributeBindings: ['clearBtn:data-clear-btn', 'mini:data-mini', 'autofocus',
     'name', 'required', 'autocomplete'],
   didInsertElement() {
-    $(this.$()).checkboxradio();
+    var checkbox = $(this.$());
+    var _this = this;
+
+    checkbox.checkboxradio();
+    checkbox.on('change', () => {
+      _this.set('checked', checkbox.prop('checked'));
+    });
   }
 });
