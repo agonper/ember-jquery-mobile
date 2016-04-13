@@ -9,6 +9,7 @@ export default Ember.Checkbox.extend({
   didInsertElement() {
     var checkbox = $(this.$());
     var _this = this;
+    this.set('elem', checkbox);
 
     checkbox.checkboxradio();
     checkbox.on('change', () => {
