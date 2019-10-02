@@ -1,3 +1,4 @@
+import { find } from '@ember/test-helpers';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
@@ -13,7 +14,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{jqm-popup}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(find('*').textContent.trim(), '');
 
   // Template block usage:
   this.render(hbs`
@@ -23,5 +24,5 @@ test('it renders', function(assert) {
   `);
 
   // Content doesn't has to be shown until the popup is loaded
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(find('*').textContent.trim(), '');
 });

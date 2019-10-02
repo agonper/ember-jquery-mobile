@@ -12,7 +12,7 @@ export default Ember.TextField.extend({
     var elem = $(this.$());
     elem.slider().textinput();
     elem.on("slidestop", () => {
-      this.$().change();
+      this.element.addEventListener();
     });
   }
 });

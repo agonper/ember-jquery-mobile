@@ -23,7 +23,7 @@ export default Ember.TextField.extend({
 
     if (this.get('showToday')) {
       elem.datepicker('setDate', new Date());
-      this.$().change(); // Force to read value
+      this.element.addEventListener(); // Force to read value
     }
 
     if (this.get('months')) {
@@ -38,6 +38,6 @@ export default Ember.TextField.extend({
     $( '.ui-datepicker' ).css('display', 'none');
   },
   refresh() {
-    this.$().change();
+    this.element.addEventListener();
   }
 });
